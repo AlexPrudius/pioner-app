@@ -7,15 +7,10 @@ import Button from "./components/Button/Button.jsx";
 import Background from "./components/Background.jsx";
 
 export default function App() {
-  const stateArray = useState();
-
-  let content = "Click button";
-
-  console.log("App component Render");
+  const [content, setContent] = useState("Nazmi na menya");
 
   function handleClick(type) {
-    console.log("button clicked", type);
-    content = type;
+    setContent(type);
   }
   return (
     <body>
@@ -28,7 +23,7 @@ export default function App() {
           <Button onClick={() => handleClick("program")}>
             {differences.program}
           </Button>
-          <p> {content}</p>
+          <p> {differences[content]}</p>
         </section>
       </div>
       <Background />
