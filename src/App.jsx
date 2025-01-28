@@ -6,6 +6,7 @@ import { differences } from "./data.js";
 import Button from "./components/Button/Button.jsx";
 import Background from "./components/Background.jsx";
 import TimeSection from "./components/TimeSection.jsx";
+import EffectSection from "./components/EffectSection.jsx";
 
 export default function App() {
   const [content, setContent] = useState("Nazmi na menya");
@@ -14,7 +15,7 @@ export default function App() {
     setContent(type);
   }
   return (
-    <body>
+    <main>
       <div>
         <section>
           <Button onClick={() => handleClick("way")}>{differences.way}</Button>
@@ -27,8 +28,11 @@ export default function App() {
           <p> {differences[content]}</p>
         </section>
         <TimeSection />
+        <EffectSection></EffectSection>
       </div>
       <Background />
-    </body>
+
+      {/* {tab === "effect" && <EffectSection />} */}
+    </main>
   );
 }

@@ -7,7 +7,7 @@ export default function TimeSection() {
 
   return (
     <section>
-      <span>Время: {now.toLocaleTimeString()}</span>
+      <span>Время сейчас: {now.toLocaleTimeString()}</span>
     </section>
   );
 }
