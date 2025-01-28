@@ -5,6 +5,7 @@ import { useState } from "react";
 import { differences } from "./data.js";
 import Button from "./components/Button/Button.jsx";
 import Background from "./components/Background.jsx";
+import TimeSection from "./components/TimeSection.jsx";
 
 export default function App() {
   const [content, setContent] = useState("Nazmi na menya");
@@ -25,6 +26,7 @@ export default function App() {
           </Button>
           <p> {differences[content]}</p>
         </section>
+        <TimeSection />
       </div>
       <Background />
     </body>
