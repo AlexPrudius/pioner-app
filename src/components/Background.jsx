@@ -1,7 +1,7 @@
 export default function Background() {
   return (
     <img
-      src="/pioner-app/photo/city.png"
+      src="/pioner-app/public/photo/city.png"
       alt=""
       style={{
         position: "absolute",
