@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ModalMap from "./Modal/ModalMap";
+import ModalProject from "./Modal/ModalProject";
 import Button from "./Button/Button";
 
 export default function EffectSection() {
@@ -7,8 +7,8 @@ export default function EffectSection() {
 
   return (
     <section>
-      <Button onClick={() => setModal(true)}>Картааааааа</Button>
-      <ModalMap open={modal} onClose={() => setModal(false)} />
+      <Button onClick={() => setModal(true)}>О проекте</Button>
+      <ModalProject open={modal} onClose={() => setModal(false)} />
     </section>
   );
 }

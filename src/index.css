@@ -31,7 +31,12 @@ body {
   min-height: 100vh;
   overflow: hidden;
 }
-
+.button-section {
+  display: flex; 
+  justify-content: center; 
+  gap: 10px;
+  margin-top: 20px;
+}
 .modal-overlay {
   position: fixed;
   top: 0;

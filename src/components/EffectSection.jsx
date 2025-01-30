@@ -7,7 +7,7 @@ export default function EffectSection() {
 
   return (
     <section>
-      <Button onClick={() => setModal(true)}>Картааааа1</Button>
+      <Button onClick={() => setModal(true)}>Карта</Button>
       <ModalMap open={modal} onClose={() => setModal(false)} />
     </section>
   );
