@@ -3,7 +3,7 @@ import ProjectSection from "../components/ProjectSection.jsx";
 import FilmSection from "../components/FilmSection.jsx";
 import Background from "../components/Background.jsx";
 
-export default function Homepage() {
+export default function HomePage() {
   return (
     <div>
       <div className="button-section">
