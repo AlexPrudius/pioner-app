@@ -57,8 +57,30 @@ body {
   width: 80%;
   max-width: 800px;
   position: relative;
+  max-height: 90vh; /* Ограничиваем высоту модалки 90% высоты экрана */
+  overflow-y: auto; /* Добавляем вертикальную прокрутку, если содержимое превышает max-height */
 }
 
+
+.modal-image {
+  flex: 1 1 calc(50% - 10px); /* две колонки с отступом */
+  max-width: calc(50% - 10px);
+}
+/* Стили для контейнера изображений в модальном окне */
+.modal-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+/* Стили для самих изображений */
+.modal-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
 .close-btn {
   position: absolute;
   top: 10px;
@@ -73,6 +95,30 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+
+.link-button {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  margin: 5px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-weight: 500;
+  transition: background-color 0.25s, border-color 0.25s;
+}
+
+.link-button:hover {
+  background-color: #646cff;
+  border-color: #646cff;
+}
+
+.link-button:focus,
+.link-button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
 
 button {
   border-radius: 8px;

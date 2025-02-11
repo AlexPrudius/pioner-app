@@ -1,3 +1,4 @@
+// App.jsx
 import "./App.css";
 import "./index.css";
 import "antd/dist/reset.css";
@@ -9,13 +10,14 @@ import {
   useNavigate,
 } from "react-router-dom";
 import HomePage from "./pages/HomePage.jsx";
-import ID1 from "./components/id/ID1.jsx";
+import ModalContent from "./components/ModalContent.jsx"; // наш динамический модальный компонент
 
 export default function App() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Если backgroundLocation отсутствует, задаём его по умолчанию (главная страница)
+  // Если location.state.backgroundLocation отсутствует (например, при прямом переходе),
+  // подставляем фоновый контент с главной страницы.
   const background = (location.state && location.state.backgroundLocation) || {
     pathname: "/pioner-app",
   };
@@ -23,24 +25,43 @@ export default function App() {
   return (
     <main>
       <header>
-        <div>
-          <Link to="/pioner-app/">Home</Link>
-        </div>
-        {/* При клике передаём текущее местоположение как фон */}
-        <Link to="/pioner-app/1" state={{ backgroundLocation: location }}>
-          Открыть модалку для ID1
+        {/* Примеры ссылок для открытия модальных окон */}
+        <Link
+          to="/pioner-app/1"
+          state={{ backgroundLocation: location }}
+          className="link-button"
+        >
+          1 объект
+        </Link>
+        <Link
+          to="/pioner-app/2"
+          state={{ backgroundLocation: location }}
+          className="link-button"
+        >
+          2 объект
         </Link>
       </header>
 
-      {/* Фоновая страница. Если пользователь зашёл напрямую в /pioner-app/1, мы подставим HomePage */}
+      {/* Фоновый контент: если пользователь перешёл напрямую по URL модалки,
+          мы подставляем фоновую страницу (HomePage) */}
       <Routes location={background}>
         <Route path="/pioner-app" element={<HomePage />} />
-        {/* Другие маршруты фонового контента можно добавить здесь */}
+        {/* Другие фоновые маршруты можно добавить здесь */}
       </Routes>
 
-      {/* Модальное окно отрисовывается поверх, если URL соответствует модальному */}
-      {location.pathname === "/pioner-app/1" && (
-        <ID1 open={true} onClose={() => navigate("/pioner-app")} />
+      {/* Динамическое модальное окно: рендерится, если путь не равен только "/pioner-app" */}
+      {location.pathname !== "/pioner-app" && (
+        <Routes>
+          <Route
+            path="/pioner-app/:id"
+            element={
+              <ModalContent
+                open={true}
+                onClose={() => navigate("/pioner-app")}
+              />
+            }
+          />
+        </Routes>
       )}
     </main>
   );
