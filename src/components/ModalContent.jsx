@@ -1,6 +1,6 @@
 import { createPortal } from "react-dom";
 import { useParams, Link } from "react-router-dom";
-import { objects } from "./data"; // убедитесь, что путь корректный
+import { objects } from "./data";
 import { YMaps } from "@pbe/react-yandex-maps";
 
 export default function ModalContent({ open, onClose }) {

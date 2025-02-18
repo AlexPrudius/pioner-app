@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ModalFilm from "./Modal/ModalFilm";
-import Button from "./Button/Button";
+import ModalFilm from "../Modal/ModalFilm";
+import Button from "../Button/Button";
 
 export default function FilmSection() {
   const [modal, setModal] = useState(false);

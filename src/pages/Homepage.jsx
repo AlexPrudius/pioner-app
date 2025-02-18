@@ -1,6 +1,6 @@
-import EffectSection from "../components/EffectSection.jsx";
-import ProjectSection from "../components/ProjectSection.jsx";
-import FilmSection from "../components/FilmSection.jsx";
+import EffectSection from "../components/Section/MapSection.jsx";
+import ProjectSection from "../components/Section/ProjectSection.jsx";
+import FilmSection from "../components/Section/FilmSection.jsx";
 import Background from "../components/Background.jsx";
 
 export default function HomePage() {

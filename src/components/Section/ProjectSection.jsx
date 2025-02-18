@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ModalProject from "./Modal/ModalProject";
-import Button from "./Button/Button";
+import ModalProject from "../Modal/ModalProject";
+import Button from "../Button/Button";
 
 export default function EffectSection() {
   const [modal, setModal] = useState(false);

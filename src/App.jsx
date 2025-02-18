@@ -24,8 +24,9 @@ export default function App() {
 
   return (
     <main>
-      <header>
-        {/* Примеры ссылок для открытия модальных окон */}
+      {/* Примеры ссылок для открытия модальных окон */}
+      {/* <header>
+        
         <Link
           to="/pioner-app/1"
           state={{ backgroundLocation: location }}
@@ -40,7 +41,7 @@ export default function App() {
         >
           2 объект
         </Link>
-      </header>
+      </header> */}
 
       {/* Фоновый контент: если пользователь перешёл напрямую по URL модалки,
           мы подставляем фоновую страницу (HomePage) */}
@@ -66,64 +67,3 @@ export default function App() {
     </main>
   );
 }
-
-// import "./App.css";
-// import "./index.css";
-// import {
-//   Routes,
-//   Route,
-//   Link,
-//   useLocation,
-//   useNavigate,
-// } from "react-router-dom";
-
-// import HomePage from "./pages/HomePage.jsx";
-// import ID1 from "./components/id/ID1.jsx";
-// import Button from "./components/Button/Button";
-
-// export default function App() {
-//   const location = useLocation();
-//   const navigate = useNavigate();
-//   const background = location.state && location.state.backgroundLocation;
-//   // const [content, setContent] = useState("Nazmi na menya");
-
-//   // function handleClick(type) {
-//   //   setContent(type);
-//   // }
-//   return (
-//     <main>
-//       <header>
-//         <div>
-//           <Link to="/pioner-app/">Home</Link>
-//         </div>
-
-//         <Link to="/pioner-app/1" state={{ backgroundLocation: location }}>
-//           Открыть модалку для ID1
-//         </Link>
-//       </header>
-//       <>
-//         <Routes location={background || location}>
-//           <Route path="/pioner-app" element={<HomePage />}></Route>
-
-//           <Route
-//             path="/pioner-app/1"
-//             element={<ID1 open={true} onClose={() => navigate(-1)} />}
-//           />
-//           {/* <Route path="/pioner-app/1" element={<ID1 />}></Route> */}
-//           {/* <Route path="/pioner-app/:id" element={<ObjectModal />}></Route> */}
-//         </Routes>
-
-//         {/* {tab === "effect" && <EffectSection />} */}
-//       </>
-//     </main>
-//   );
-// }
-
-// <Button onClick={() => handleClick("way")}>{differences.way}</Button>
-//           <Button onClick={() => handleClick("easy")}>
-//             {differences.easy}
-//           </Button>
-//           <Button onClick={() => handleClick("program")}>
-//             {differences.program}
-//           </Button>
-//           <p> {differences[content]}</p>
