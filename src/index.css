@@ -31,6 +31,9 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow: hidden;
+  background-image: url(/public/photo/bkg.jpg);
+  background-size: cover;
+  background-position: center;
 }
 .button-section {
   display: flex; 
