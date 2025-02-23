@@ -10,7 +10,7 @@ export default function ModalMap({ open, onClose }) {
         <button className="close-btn" onClick={onClose}>
           ✖
         </button>
-        <h3>Значимые места Пионерного</h3>
+        <h3>Карта</h3>
         <MapComponent />
       </div>
     </div>,

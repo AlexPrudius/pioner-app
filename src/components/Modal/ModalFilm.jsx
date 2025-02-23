@@ -14,14 +14,13 @@ export default function ModalFilm({ open, onClose }) {
         <hr
           role="separator"
           aria-orientation="horizontal"
-          class="v-divider theme--light"
+          className="v-divider theme--light"
         ></hr>
         <iframe
           width="100%"
           height="315"
           src="https://www.youtube.com/embed/KtmIduhWIwQ"
           title="YouTube video player"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen="allowfullscreen"
         ></iframe>
@@ -30,7 +29,6 @@ export default function ModalFilm({ open, onClose }) {
           height="315"
           src="https://www.youtube.com/embed/hcGY_T-i16c"
           title="YouTube video player"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen="allowfullscreen"
         ></iframe>

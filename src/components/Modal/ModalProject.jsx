@@ -14,7 +14,7 @@ export default function ModalProject({ open, onClose }) {
         <hr
           role="separator"
           aria-orientation="horizontal"
-          class="v-divider theme--light"
+          className="v-divider theme--light"
         ></hr>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis quod
