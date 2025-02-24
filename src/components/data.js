@@ -13,11 +13,11 @@ export const objects = [
     },
     images: [
       {
-        url: "src/assets/images/2.jpg",
+        url: "/public/photo/2.jpg",
         source: "https://pastvu.com/p/1416774",
       },
       {
-        url: "src/assets/images/3.jpg",
+        url: "/public/photo/3.jpg",
         source: "https://pastvu.com/p/1197538",
       },
     ],
