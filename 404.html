@@ -5,11 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Redirecting...</title>
   <script>
-    // Перенаправляем все запросы на index.html
+    // Получаем текущий путь
     const path = window.location.pathname;
     const search = window.location.search;
     const hash = window.location.hash;
-    window.location.href = `/pioner-app/index.html${path}${search}${hash}`;
+
+    // Проверяем, не пытаемся ли мы уже перенаправить на index.html
+    if (!path.includes('/index.html')) {
+      // Перенаправляем на index.html, сохраняя путь, параметры и хэш
+      window.location.href = `/pioner-app/index.html${path}${search}${hash}`;
+    }
   </script>
 </head>
 <body>
