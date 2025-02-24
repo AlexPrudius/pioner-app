@@ -7,6 +7,7 @@ import {
   Route,
   useLocation,
   useNavigate,
+  Navigate
 } from "react-router-dom";
 import HomePage from "./pages/HomePage.jsx";
 import ModalContent from "./components/ModalContent.jsx"; // наш динамический модальный компонент
@@ -28,6 +29,7 @@ export default function App() {
             />
           }
         />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </main>
   );
